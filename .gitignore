@@ -5,3 +5,5 @@ __pycache__/
 db.sqlite3
 web/node_modules/
 web/dist/
+.vercel
+staticfiles/

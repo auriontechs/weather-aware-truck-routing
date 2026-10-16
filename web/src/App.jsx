@@ -20,7 +20,8 @@ export default function App() {
     setError('')
     setResult(null)
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/plan/', {
+      const api = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
+      const response = await fetch(`${api}/api/plan/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         signal: AbortSignal.timeout(60000),

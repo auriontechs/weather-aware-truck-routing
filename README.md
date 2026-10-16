@@ -1,5 +1,7 @@
 # Weather-aware truck routing
 
+Live site: https://truck-routing-beta.vercel.app
+
 A React and Django app that compares three truck routes and recommends the safest one for a given departure time and load weight.
 
 The driver enters an origin, a destination, a departure date and time, and a load weight in pounds. The server asks OpenRouteService for three heavy-goods routes, samples the forecast along each route, and ranks them with the Spotter risk rules.
