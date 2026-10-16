@@ -5,6 +5,7 @@
   font-family: Georgia, serif;
   color: #1a1a1a;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .lead {
@@ -29,14 +30,22 @@ form.card {
 label {
   display: grid;
   gap: 6px;
-  font-size: 14px;
+  font-size: 16px;
+  text-align: left;
 }
 
 input {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font: inherit;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
 }
 
 button {
@@ -106,4 +115,59 @@ button {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+}
+
+.map .leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .page {
+    margin: 12px auto 28px;
+    padding: 0 14px 36px;
+  }
+
+  .page h1 {
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+    margin: 8px 0 12px;
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  form.card,
+  .result {
+    padding: 16px;
+  }
+
+  .result h2,
+  .result p {
+    text-align: left;
+  }
+
+  .result p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .map .leaflet-container {
+    height: 300px;
+  }
+
+  .slider {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .legend {
+    justify-content: flex-start;
+    gap: 8px 12px;
+    font-size: 13px;
+  }
 }
